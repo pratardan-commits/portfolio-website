@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Portfolio website of pratardan hegde",
+  "keywords": [
+    "portfolio",
+    "website",
+    "pratardanhegde",
+    "UI/UX",
+    "designer"
+  ],
+  "license": "ISC",
+  "author": "Pratardan Shankar Hegde",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "sass": "^1.99.0"
+  }
+}
