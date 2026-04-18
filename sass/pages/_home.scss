@@ -1,0 +1,20 @@
+.section__hero {
+  height: 100vh;
+  position: relative; // 👈 needed
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0; // covers full area
+    background-image: url(../assets/images/hero-background.png);
+
+    background-position: center;
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
