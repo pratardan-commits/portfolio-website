@@ -1,20 +1,89 @@
 .section__hero {
   height: 100vh;
-  position: relative; // 👈 needed
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 6rem;
 
   &::before {
     content: "";
     position: absolute;
-    inset: 0; // covers full area
+    inset: 0;
     background-image: url(../assets/images/hero-background.png);
-
+    background-size: 30%;
+    background-repeat: repeat;
     background-position: center;
-    opacity: 0.1;
+    opacity: 0.025;
     z-index: 0;
   }
 
   & > * {
     position: relative;
     z-index: 1;
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding-left: 3.5rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  &__greeting {
+    font-size: 1.6rem;
+  }
+
+  &__title {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 6.4rem;
+    font-weight: Black;
+    font-style: italic;
+    color: $color-primary;
+  }
+
+  &__tags {
+    display: flex;
+    margin-left: auto;
+    list-style: none;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+    padding: 1.4rem 1.6rem;
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: 1.5rem;
+    border: 2px solid $color-black;
+    box-shadow: 4px 7px 0 0 $color-black;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    max-width: 40rem;
+    line-height: 1.6;
+  }
+
+  &__image-wrapper {
+    width: 35%;
+    height: 100%;
+  }
+
+  &__image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__btn {
+    margin-left: auto;
   }
 }

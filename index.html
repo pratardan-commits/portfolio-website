@@ -11,16 +11,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <title>prat-designs</title>
   </head>
@@ -38,8 +40,12 @@
           <li class="nav__item">
             <a class="nav__link nav__link--active" href="#">Home</a>
           </li>
-          <li class="nav__item"><a class="nav__link" href="#">About Me</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Projects</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Projects</a>
+          </li>
           <li class="nav__item">
             <a class="nav__link btn" href="mailto:pratardan17@gmail.com"
               >Contact Me</a
@@ -48,11 +54,65 @@
         </ul>
       </nav>
     </header>
+
     <main>
-      <div class="section__hero"></div>
+      <section class="section__hero">
+        <div class="hero">
+          <div class="hero__content">
+            <p class="hero__greeting">Hi, I am Pratardan Hegde</p>
+            <h1 class="hero__title">Interaction Designer</h1>
+
+            <ul class="hero__tags">
+              <li class="hero__tag">UI Design</li>
+              <li class="hero__tag">UX Design</li>
+              <li class="hero__tag">Branding</li>
+              <li class="hero__tag">Video Editing</li>
+            </ul>
+
+            <p class="hero__description">
+              Simplifying complicated workflows through curiosity, structured
+              thinking. Guided by minimalism
+            </p>
+
+            <a class="btn hero__btn" href="#">Check Out My Work </a>
+          </div>
+
+          <div class="hero__image-wrapper">
+            <img
+              class="hero__image"
+              src="assets/images/hero-profile.svg"
+              alt="Pratardan Hegde's Illustration"
+            />
+          </div>
+        </div>
+      </section>
     </main>
-    <!-- <footer class="footer">
-      <p>Designed & Devoloped by Pratardan Hegde</p>
-    </footer> -->
+
+    <footer class="footer">
+      <p class="footer__paragraph">Designed & Developed by Pratardan Hegde</p>
+      <div class="footer__icons">
+        <a
+          class="footer__link"
+          href="mailto:pratardan17@gmail.com"
+          aria-label="Icon to open Pratardan's Email"
+        >
+          <ion-icon
+            class="footer__icon footer__icon--mail"
+            name="mail"
+          ></ion-icon>
+        </a>
+        <a
+          class="footer__link"
+          href="https://www.linkedin.com/in/pratardanhegde/"
+          target="_blank"
+          aria-label="Icon to open Pratardan's Linkedin"
+        >
+          <ion-icon
+            class="footer__icon footer__icon--linkedin"
+            name="logo-linkedin"
+          ></ion-icon>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>

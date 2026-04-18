@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-primary;
+  padding: 1.6rem 3.4rem;
+  color: $color-white;
+  gap: 2.4rem;
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__icon {
+    font-size: 2.8rem;
+    color: $color-white;
+  }
+}

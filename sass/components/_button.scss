@@ -5,6 +5,8 @@
   font-weight: bold;
   border: 2px solid $color-primary;
   box-shadow: 4px 7px 0 0 transparent;
+  font-family: inherit;
+  text-decoration: none;
 
   &:hover {
     color: $color-white;
