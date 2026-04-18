@@ -94,7 +94,7 @@ body {
 }
 .btn:active {
   color: #fdfdfd;
-  background-color: #1f3bcb;
+  background-color: #1b33ab;
   border: 2px solid #0d0d0d;
   box-shadow: 4px 7px 0 0 #0d0d0d;
 }
@@ -130,6 +130,7 @@ body {
   padding-left: 3.5rem;
 }
 .hero__content {
+  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -165,13 +166,12 @@ body {
   line-height: 1.6;
 }
 .hero__image-wrapper {
-  width: 35%;
+  width: 40%;
   height: 100%;
 }
 .hero__image {
   position: relative;
   height: 100%;
-  width: 100%;
   object-fit: contain;
 }
 .hero__btn {
