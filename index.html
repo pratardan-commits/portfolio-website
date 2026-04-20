@@ -63,18 +63,30 @@
             <h1 class="hero__title">Interaction Designer</h1>
 
             <ul class="hero__tags">
+              <li class="hero__tag">Wireframing</li>
+              <li class="hero__tag">Information Architecture</li>
               <li class="hero__tag">UI Design</li>
               <li class="hero__tag">UX Design</li>
-              <li class="hero__tag">Branding</li>
-              <li class="hero__tag">Video Editing</li>
             </ul>
 
-            <p class="hero__description">
-              Simplifying complicated workflows through curiosity, structured
-              thinking. Guided by minimalism
-            </p>
-
-            <a class="btn hero__btn" href="#">Check Out My Work </a>
+            <div class="hero__scroll">
+              <p class="hero__description">
+                Simplifying complicated workflows through curiosity, structured
+                thinking. Guided by minimalism
+              </p>
+              <a
+                class="btn hero__btn"
+                href="#"
+                onclick="
+                  event.preventDefault();
+                  document
+                    .getElementById('projects')
+                    .scrollIntoView({ behavior: 'smooth' });
+                "
+              >
+                Check Out My Work <span>&darr;</span>
+              </a>
+            </div>
           </div>
 
           <div class="hero__image-wrapper">
@@ -87,11 +99,62 @@
         </div>
       </section>
 
-      <section class="section__projects"></section>
+      <section class="section__projects" id="projects">
+        <h2 class="projects__heading">Projects</h2>
+        <div class="projects">
+          <div class="project project--1">
+            <div class="project__content">
+              <img
+                class="project__logo"
+                src="assets/images/project-card-logo-1.png"
+                alt="logo of Xpulse Gamified fitness app UI/UX project"
+              />
+              <h2 class="heading__secondary">XPulse - Gamified Fitness</h2>
+              <p class="project__paragraph">
+                An App that gamifies fitness and looks for a new approach to
+                make fitness more fun.
+              </p>
+              <a class="btn project__btn" href="#">View Project</a>
+            </div>
+            <div class="project__image__container project__image__container--1">
+              <img
+                src="assets/images/project-1-image.png"
+                alt="Xpulse gamified fitness app  mobile screens"
+                class="project__image project__image--1"
+              />
+            </div>
+          </div>
+          <div class="project project--2">
+            <div class="project__content">
+              <img
+                class="project__logo"
+                src="assets/images/project-card-logo-2.png"
+                alt="logo of Xpulse Gamified fitness app UI/UX project"
+              />
+              <h2 class="heading__secondary">Odin's Smart Haven</h2>
+              <p class="project__paragraph">
+                A Smart home App that integrates all complex systems together
+                making smart home management easier
+              </p>
+              <a class="btn project__btn" href="#">View Project</a>
+            </div>
+            <div class="project__image__container project__image__container--2">
+              <img
+                src="assets/images/project-2-image.png"
+                alt="Xpulse gamified fitness app  mobile screens"
+                class="project__image project__image--2"
+              />
+            </div>
+          </div>
+          <div class="project project--3"></div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-      <p class="footer__paragraph">Designed & Developed by Pratardan Hegde</p>
+      <p class="footer__paragraph">
+        Designed & Developed by Pratardan Shankar Hegde
+      </p>
       <div class="footer__icons">
         <a
           class="footer__link"
