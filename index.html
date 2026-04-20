@@ -44,7 +44,17 @@
             <a class="nav__link" href="about-me.html">About Me</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Projects</a>
+            <a
+              class="nav__link"
+              href="#"
+              onclick="
+                event.preventDefault();
+                document
+                  .getElementById('projects')
+                  .scrollIntoView({ behavior: 'smooth' });
+              "
+              >Projects</a
+            >
           </li>
           <li class="nav__item">
             <a class="nav__link btn" href="mailto:pratardan17@gmail.com"
@@ -129,7 +139,7 @@
               <img
                 class="project__logo"
                 src="assets/images/project-card-logo-2.png"
-                alt="logo of Xpulse Gamified fitness app UI/UX project"
+                alt="logo of Odin's Smart Haven project"
               />
               <h2 class="heading__secondary">Odin's Smart Haven</h2>
               <p class="project__paragraph">
@@ -140,13 +150,51 @@
             </div>
             <div class="project__image__container project__image__container--2">
               <img
-                src="assets/images/project-2-image.png"
-                alt="Xpulse gamified fitness app  mobile screens"
-                class="project__image project__image--2"
+                src="assets/images/project-2-lamp.png"
+                alt="Lamp"
+                class="project__image project__image--lamp"
+              />
+              <img
+                src="assets/images/project-2-screen-1.png"
+                alt="Odin's Smart Haven screen 1"
+                class="project__image project__image--screen-1"
+              />
+              <img
+                src="assets/images/project-2-screen-3.png"
+                alt="Odin's Smart Haven screen 3"
+                class="project__image project__image--screen-3"
+              />
+              <img
+                src="assets/images/project-2-screen-2.png"
+                alt="Odin's Smart Haven main screen"
+                class="project__image project__image--screen-2"
               />
             </div>
           </div>
-          <div class="project project--3"></div>
+          <div class="project project--3">
+            <div class="project__content">
+              <img
+                class="project__logo"
+                src="assets/images/project-card-logo-3.png"
+                alt="logo of Apex Mind project"
+              />
+              <h2 class="heading__secondary">
+                Apex Mind - Men's Mental Health App
+              </h2>
+              <p class="project__paragraph">
+                An Mental Health app specially made for men addressing the
+                mental health needs required for men.
+              </p>
+              <a class="btn project__btn" href="#">View Project</a>
+            </div>
+            <div class="project__image__container project__image__container--3">
+              <img
+                src="assets/images/project-3-image.png"
+                alt="Apex Mind App mobile screens"
+                class="project__image project__image--3"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </main>

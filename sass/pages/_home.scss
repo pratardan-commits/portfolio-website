@@ -92,6 +92,8 @@
 
 .section__projects {
   padding: 0 3.5rem;
+  margin-bottom: 6rem;
+  scroll-margin-top: 15rem;
 }
 
 .projects__heading {
@@ -128,7 +130,7 @@
 .project {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   background-color: $color-pure-white;
   border-radius: 1.5rem;
   box-shadow: 0 16px 5px 0 rgba($color-black, 0.2);
@@ -137,6 +139,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2.4rem;
     padding: 11.5rem 3.5rem;
     max-width: 60rem;
@@ -157,7 +160,9 @@
 
   &__image__container {
     width: 50%;
-    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 2rem;
     text-align: center;
     position: relative;
@@ -169,7 +174,6 @@
     }
 
     &--1 {
-      height: 100%;
       background-color: $color-p1-primary;
 
       &::before {
@@ -180,6 +184,109 @@
         background-size: 60%;
         background-repeat: repeat;
         opacity: 0.05;
+        z-index: 0;
+      }
+
+      &:hover img {
+        transform: scale(1.075);
+      }
+    }
+
+    &--2 {
+      background-color: $color-p2-background;
+      overflow: hidden;
+
+      .project__image {
+        position: absolute;
+        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        height: 75%;
+        width: auto;
+
+        &--lamp {
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -100%);
+          height: auto;
+          width: 50%;
+          max-width: 25rem;
+          opacity: 0;
+          z-index: 3;
+        }
+
+        &--screen-1 {
+          transform: translateX(-30%) scale(0.85);
+          z-index: 1;
+        }
+
+        &--screen-3 {
+          transform: translateX(30%) scale(0.85);
+          z-index: 1;
+        }
+
+        &--screen-2 {
+          transform: scale(0.95);
+          z-index: 2;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(
+            to bottom,
+            transparent 70%,
+            $color-p2-background 100%
+          ),
+          conic-gradient(
+            from 90deg at 50% -5%,
+            transparent 30deg,
+            rgba(253, 192, 103, 0.25) 60deg,
+            rgba(253, 192, 103, 0.6) 90deg,
+            rgba(253, 192, 103, 0.25) 120deg,
+            transparent 150deg
+          );
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        z-index: 0;
+      }
+
+      &:hover {
+        .project__image--lamp {
+          transform: translate(-50%, -5%);
+          opacity: 1;
+        }
+
+        .project__image--screen-1 {
+          transform: translate(-90%, 2%) scale(0.85);
+        }
+
+        .project__image--screen-3 {
+          transform: translate(90%, 2%) scale(0.85);
+        }
+
+        .project__image--screen-2 {
+          transform: scale(1.05);
+        }
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &--3 {
+      background-color: $color-p3-background;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url(../assets/images/project-3-bg-doodles.png);
+        background-size: 40%;
+        background-repeat: repeat;
+        opacity: 0.1;
         z-index: 0;
       }
 
