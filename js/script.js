@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Enable :active states on mobile/tablet
+  document.body.addEventListener("touchstart", () => {}, { passive: true });
+
   const hamburger = document.querySelector(".header__hamburger");
   const nav = document.querySelector(".nav");
   const icon = document.querySelector(".header__icon");

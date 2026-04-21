@@ -7,6 +7,17 @@
   color: $color-white;
   gap: 2.4rem;
 
+  @include respond(tab-port) {
+    padding: 0.8rem 1.6rem;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+    padding: 2.4rem 1.6rem;
+    gap: 1.6rem;
+    text-align: center;
+  }
+
   &__icons {
     display: flex;
     justify-content: space-between;
