@@ -10,15 +10,77 @@
   background-color: $color-background;
   box-shadow: 0 4px 4px rgba($color-black, 0.25);
   z-index: 100;
+
+  @include respond(tab-port) {
+    padding: 1.6rem 2rem;
+  }
+
+  &__hamburger {
+    display: none;
+    visibility: hidden;
+    z-index: 101;
+
+    @include respond(tab-port) {
+      display: flex;
+      visibility: visible;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include respond(tab-land) {
+      .header__icon {
+        color: $color-white;
+      }
+    }
+
+    &:hover .header__icon {
+      color: $color-white;
+    }
+  }
+
+  &__icon {
+    font-size: 3rem;
+    color: $color-primary;
+  }
 }
 
 .nav {
+  @include respond(tab-port) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-pure-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.95);
+    z-index: 100;
+
+    &--open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+  }
+
   &__list {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
     align-items: center;
     gap: 5rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      gap: 4rem;
+    }
   }
 
   &__link {

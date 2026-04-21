@@ -1,5 +1,6 @@
 .btn {
   display: inline-block;
+  white-space: nowrap;
   padding: 1.4rem 1.6rem;
   color: $color-primary;
   border-radius: 1.5rem;
@@ -8,6 +9,13 @@
   box-shadow: 4px 7px 0 0 transparent;
   font-family: inherit;
   text-decoration: none;
+
+  @include respond(tab-land) {
+    color: $color-white;
+    background-color: $color-primary;
+    border: 2px solid $color-black;
+    box-shadow: 4px 7px 0 0 rgba($color-black, 1);
+  }
 
   &:hover {
     color: $color-white;

@@ -5,6 +5,14 @@
   overflow: hidden;
   margin-bottom: 6rem;
 
+  @include respond(tab-land) {
+    height: 60vw;
+  }
+
+  @include respond(tab-port) {
+    height: auto;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -30,16 +38,52 @@
   height: 100%;
   padding-left: 3.5rem;
 
+  @include respond(tab-land) {
+    padding-top: 10rem;
+  }
+
+  @include respond(tab-port) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 22rem 2rem 0 2rem;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  @include respond(phone) {
+    padding: 16rem 1.5rem 2rem 1.5rem;
+    gap: 4rem;
+    justify-content: flex-start;
+  }
+
   &__content {
-    width: 60%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 8rem;
+
+    @include respond(tab-land) {
+      width: 60%;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+      padding: 0 4rem;
+    }
   }
 
   &__greeting {
     font-size: 1.6rem;
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
   }
 
   &__title {
@@ -48,45 +92,126 @@
     font-weight: Black;
     font-style: italic;
     color: $color-primary;
+
+    @include respond(tab-land) {
+      font-size: 5rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 4.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 4.6rem;
+      line-height: 1.1;
+    }
   }
 
   &__tags {
     display: flex;
-    margin-left: auto;
     list-style: none;
     gap: 1.6rem;
     flex-wrap: wrap;
+
+    @include respond(tab-land) {
+      justify-content: center;
+    }
+
+    @include respond(tab-port) {
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    @include respond(phone) {
+      gap: 1.2rem;
+    }
   }
 
   &__tag {
     padding: 1.4rem 1.6rem;
-    background-color: $color-primary;
+    background: $gradient-blue;
     color: $color-white;
     border-radius: 1.5rem;
-    border: 2px solid $color-black;
-    box-shadow: 4px 7px 0 0 $color-black;
+
+    @include respond(tab-land) {
+      padding: 1.4rem 1.6rem;
+      font-size: 1.6rem;
+      border-radius: 1.5rem;
+      flex: 0 0 calc(50% - 0.8rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include respond(phone) {
+      padding: 1.2rem 1.6rem;
+      font-size: 1.6rem;
+      border-radius: 1.5rem;
+    }
   }
 
   &__scroll {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__description {
     font-size: 1.6rem;
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+      line-height: 1.6;
+    }
   }
 
   &__image-wrapper {
     display: flex;
     align-items: flex-end;
+    justify-content: flex-end;
     height: 100%;
+    width: 45%;
+
+    picture {
+      display: contents;
+    }
+
+    @include respond(tab-land) {
+      width: 40%;
+      align-items: center;
+    }
+
+    @include respond(tab-port) {
+      height: auto;
+      width: 100%;
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
   }
 
   &__image {
-    position: relative;
     height: 100%;
+    max-width: 100%;
     object-fit: contain;
+    object-position: bottom right;
+
+    @include respond(tab-land) {
+      height: 100%;
+      max-width: 100%;
+    }
+
+    @include respond(tab-port) {
+      height: auto;
+      max-height: 45vh;
+      object-position: bottom center;
+    }
   }
 }
 
@@ -94,6 +219,10 @@
   padding: 0 3.5rem;
   margin-bottom: 6rem;
   scroll-margin-top: 15rem;
+
+  @include respond(tab-port) {
+    padding: 0 2rem;
+  }
 }
 
 .projects__heading {
@@ -136,13 +265,24 @@
   box-shadow: 0 16px 5px 0 rgba($color-black, 0.2);
   overflow: hidden;
 
+  @include respond(tab-port) {
+    flex-direction: column-reverse;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2.4rem;
     padding: 11.5rem 3.5rem;
-    max-width: 60rem;
+    width: 50%;
+
+    @include respond(tab-port) {
+      width: 100%;
+      padding: 6rem 3.5rem;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__logo {
@@ -152,10 +292,18 @@
   &__paragraph {
     color: $color-grey;
     font-size: 1.6rem;
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
   }
 
   &__btn {
     align-self: flex-start;
+
+    @include respond(tab-port) {
+      align-self: center;
+    }
   }
 
   &__image__container {
@@ -166,6 +314,11 @@
     padding: 2rem;
     text-align: center;
     position: relative;
+
+    @include respond(tab-port) {
+      width: 100%;
+      min-height: 30rem;
+    }
 
     img {
       position: relative;
@@ -188,7 +341,11 @@
       }
 
       &:hover img {
-        transform: scale(1.075);
+        transform: scale(1.1);
+
+        @include respond(tab-land) {
+          transform: none;
+        }
       }
     }
 
@@ -253,6 +410,31 @@
       }
 
       &:hover {
+        @media (hover: hover) {
+          .project__image--lamp {
+            transform: translate(-50%, -5%);
+            opacity: 1;
+          }
+
+          .project__image--screen-1 {
+            transform: translate(-90%, 2%) scale(0.85);
+          }
+
+          .project__image--screen-3 {
+            transform: translate(90%, 2%) scale(0.85);
+          }
+
+          .project__image--screen-2 {
+            transform: scale(1.05);
+          }
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+
+      @include respond(tab-land) {
         .project__image--lamp {
           transform: translate(-50%, -5%);
           opacity: 1;
@@ -291,7 +473,11 @@
       }
 
       &:hover img {
-        transform: scale(1.075);
+        transform: scale(1.1);
+
+        @include respond(tab-land) {
+          transform: none;
+        }
       }
     }
   }
