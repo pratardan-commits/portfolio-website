@@ -2,6 +2,16 @@
   padding: 3.5rem;
   padding-top: 15.5rem;
   margin-bottom: 6rem;
+
+  @include respond(tab-port) {
+    padding-top: 22rem; // Corrected to clear fixed header
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include respond(phone) {
+    padding-top: 18rem;
+  }
 }
 
 .about {
@@ -9,7 +19,26 @@
   gap: 5rem;
   align-items: start;
 
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  &__image-wrapper {
+    flex: 0 0 45%; // Prevent shrinking and set larger base width
+    max-width: 50rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      max-width: 45rem;
+      margin-bottom: 2rem;
+    }
+  }
+
   &__image {
+    width: 100%;
     border-radius: 1.5rem;
     border: solid $color-black 2px;
   }
@@ -19,12 +48,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
+
+    @include respond(tab-port) {
+      align-items: center;
+    }
   }
 
   &__paragraph {
     display: block;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.8rem;
     line-height: 1.8;
+    font-size: 1.8rem;
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -34,6 +72,271 @@
 
 .section__tools {
   padding: 3.5rem;
-
   margin-bottom: 6rem;
+  text-align: center;
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 5rem;
+  text-align: left;
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  &__main-heading {
+    margin-bottom: 2rem;
+    font-family: "Playfair Display", serif;
+  }
+
+  &__card {
+    background-color: $color-pure-white;
+    border-radius: 2rem;
+    padding: 4rem 2.5rem 3rem;
+    position: relative;
+    border: 2px solid $color-black;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+    @include respond(tab-port) {
+      padding-top: 5rem;
+    }
+  }
+
+  &__card-header {
+    position: absolute;
+    top: -1.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $gradient-blue;
+    color: $color-pure-white;
+    padding: 0.8rem 3rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(38, 72, 235, 0.3);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
+.tool {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  background-color: #f8f9fa;
+  border-radius: 1.2rem;
+  transition: all 0.3s ease;
+
+  &__logo-box {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+  }
+}
+
+.section__beyond {
+  padding: 6rem 3.5rem;
+  margin-bottom: 6rem;
+
+  @include respond(tab-port) {
+    padding: 4rem 2rem;
+  }
+
+  &-heading {
+    margin-bottom: 5rem;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+  }
+}
+
+.beyond {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    max-width: 100%;
+    padding: 0 3.5rem;
+    margin: 0 auto;
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 0;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__tile {
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 4 / 5;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: #fafafa;
+
+    &:hover {
+      transform: translateY(-1rem) scale(1.02);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+    }
+
+    &-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+
+      img,
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+    }
+  }
+}
+
+// --- OVERLAY STYLES ---
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 3000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 5vw;
+  cursor: zoom-out;
+
+  &--open {
+    display: flex;
+  }
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
+  &__close {
+    position: absolute;
+    top: 3rem;
+    right: 4rem;
+    z-index: 3100;
+    
+    // Custom White Neo-Brutalist style for the overlay
+    &.btn {
+      background-color: transparent;
+      border-color: #fff;
+      color: #fff;
+      box-shadow: none; // REMOVED SHADOW AS REQUESTED
+
+      ion-icon {
+        color: #fff;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          // Reverting to your standard .btn hover style
+          background-color: $color-primary;
+          color: #fff;
+          border-color: $color-black;
+          box-shadow: 4px 7px 0 0 rgba($color-black, 1);
+
+          ion-icon {
+            color: #fff;
+          }
+        }
+      }
+
+      &:active {
+        box-shadow: 1px 1px 0 0 $color-black;
+        transform: translate(2px, 5px);
+      }
+    }
+
+    @include respond(tab-port) {
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+
+  &__content {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+
+    img,
+    video {
+      max-width: 95vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+
+      @include respond(tab-port) {
+        max-width: 100%;
+        max-height: 80vh;
+      }
+    }
+
+    video {
+      background-color: #000;
+    }
+  }
 }
