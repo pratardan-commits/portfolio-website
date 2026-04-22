@@ -1,0 +1,12 @@
+.heading__project__tag {
+  padding: 0.8rem 1.6rem;
+  border-radius: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  &--1 {
+    background-color: $color-p1-btns;
+    color: $color-black;
+    border: 2px solid $color-black;
+  }
+}

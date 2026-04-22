@@ -327,6 +327,7 @@
       height: auto;
       object-fit: contain;
       border-radius: 0.5rem;
+      background-color: $color-background;
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 
       @include respond(tab-port) {

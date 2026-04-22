@@ -36,4 +36,18 @@
     box-shadow: 1px 1px 0 0 rgba($color-black, 1);
     transform: translate(2px, 5px);
   }
+
+  &--p1 {
+    color: $color-p1-btns;
+    border-color: $color-p1-btns;
+
+    &:hover {
+      background-color: $color-p1-btns;
+      color: $color-black;
+    }
+
+    &:active {
+      background-color: $color-p1-btns-dark;
+    }
+  }
 }

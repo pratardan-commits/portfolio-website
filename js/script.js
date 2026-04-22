@@ -35,25 +35,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Beyond the Brief Overlay Logic ---
-  const beyondTiles = document.querySelectorAll(".beyond__tile");
+  // --- Global Overlay Logic ---
   const overlay = document.querySelector("#overlay");
   const overlayImg = document.querySelector("#overlay-img");
   const overlayVideo = document.querySelector("#overlay-video");
   const closeBtn = document.querySelector(".overlay__close");
 
-  if (beyondTiles && overlay) {
-    beyondTiles.forEach((tile) => {
-      tile.addEventListener("click", () => {
-        const isVideo = tile.classList.contains("beyond__tile--video");
-        const videoSrc = tile.getAttribute("data-video-src");
-        const imgSrc = tile.querySelector("img")?.src;
-
-        // Reset visibility
-        overlayImg.style.display = "none";
-        overlayVideo.style.display = "none";
+  const closeOverlay = () => {
+    if (overlay) {
+      overlay.classList.remove("overlay--open");
+      if (overlayVideo) {
         overlayVideo.pause();
         overlayVideo.src = "";
+      }
+      document.body.style.overflow = ""; // Re-enable scrolling
+    }
+  };
+
+  if (overlay) {
+    if (closeBtn) closeBtn.addEventListener("click", closeOverlay);
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeOverlay();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeOverlay();
+    });
+  }
+
+  // Handle Beyond Tiles
+  const beyondTiles = document.querySelectorAll(".beyond__tile");
+  beyondTiles.forEach((tile) => {
+    tile.addEventListener("click", () => {
+      const isVideo = tile.classList.contains("beyond__tile--video");
+      const videoSrc = tile.getAttribute("data-video-src");
+      const imgSrc = tile.querySelector("img")?.src;
+
+      if (overlayImg && overlayVideo) {
+        overlayImg.style.display = "none";
+        overlayVideo.style.display = "none";
 
         if (isVideo && videoSrc) {
           overlayVideo.src = videoSrc;
@@ -63,27 +82,50 @@ document.addEventListener("DOMContentLoaded", () => {
           overlayImg.src = imgSrc;
           overlayImg.style.display = "block";
         }
-
         overlay.classList.add("overlay--open");
-        document.body.style.overflow = "hidden"; // Prevent scrolling
-      });
+        document.body.style.overflow = "hidden";
+      }
     });
+  });
 
-    const closeOverlay = () => {
-      overlay.classList.remove("overlay--open");
-      overlayVideo.pause();
-      overlayVideo.src = "";
-      document.body.style.overflow = ""; // Re-enable scrolling
+  // Handle Persona and Full-Bleed Images
+  const expandableImages = document.querySelectorAll(
+    ".project__slide-img, .projectpage__full-bleed-img",
+  );
+  expandableImages.forEach((img) => {
+    img.addEventListener("click", () => {
+      if (overlayImg && overlayVideo) {
+        overlayImg.src = img.src;
+        overlayImg.style.display = "block";
+        overlayVideo.style.display = "none";
+        overlay.classList.add("overlay--open");
+        document.body.style.overflow = "hidden";
+      }
+    });
+  });
+
+  // --- Project Persona Slider Logic ---
+  const sliderTrack = document.querySelector(".project__slider-slides");
+  const leftBtn = document.querySelector(".project__slider-btn--left");
+  const rightBtn = document.querySelector(".project__slider-btn--right");
+  const slideElements = document.querySelectorAll(".project__slide");
+
+  if (sliderTrack && leftBtn && rightBtn) {
+    let currentSlide = 0;
+    const totalSlides = slideElements.length;
+
+    const updateSlider = () => {
+      sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
     };
 
-    if (closeBtn) closeBtn.addEventListener("click", closeOverlay);
-    overlay.addEventListener("click", (e) => {
-      if (e.target === overlay) closeOverlay();
+    rightBtn.addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlider();
     });
 
-    // Close on Escape key
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeOverlay();
+    leftBtn.addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlider();
     });
   }
 });
