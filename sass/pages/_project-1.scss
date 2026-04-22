@@ -1,0 +1,26 @@
+.section__projectintro {
+  padding: 3.5rem;
+  padding-top: 15.5rem;
+}
+
+.project__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.project__name--1 {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: $color-black;
+
+  &-span-1 {
+    color: $color-p1-btns;
+  }
+
+  &-span-2 {
+    color: $color-primary;
+  }
+}
