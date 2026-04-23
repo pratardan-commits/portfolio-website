@@ -9,4 +9,9 @@
     color: $color-black;
     border: 2px solid $color-black;
   }
+
+  &--2 {
+    background-color: $color-p2-btns;
+    color: $color-white;
+  }
 }

@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="icon" type="image/png" href="assets/images/favicon-light.png" />
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script defer src="js/script.js"></script>
+
+    <title>prat-designs | project-2</title>
+  </head>
+  <body class="project-2-page">
+    <header class="header">
+      <a class="header__logo" href="index.html">
+        <img
+          src="assets/images/header-logo.png"
+          alt="Pratardan's Portfolio Logo"
+        />
+      </a>
+      <button class="header__hamburger btn">
+        <ion-icon name="menu" class="header__icon"></ion-icon>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="about-me.html">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="index.html#projects">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link btn" href="mailto:pratardan17@gmail.com"
+              >Contact Me</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="section__projectintro">
+        <div class="project__header">
+          <img
+            src="assets/images/project-2/logo-project-2.png"
+            alt="Odin's Haven Logo"
+            class="project__header-logo"
+          />
+          <div class="project__header-text">
+            <h2 class="heading__secondary project__genere--2">
+              Odin’s Haven
+            </h2>
+            <h2 class="heading__name project__name--2">
+              Smart Home App
+            </h2>
+          </div>
+        </div>
+        <nav class="project__nav">
+          <ul class="project__nav__list">
+            <li class="project__nav__item">
+              <a class="project__nav__link btn btn--p2" href="#user-research"
+                >User Research</a
+              >
+            </li>
+            <li class="project__nav__item">
+              <a
+                class="project__nav__link btn btn--p2"
+                href="#information-architecture"
+                >Information Architecture</a
+              >
+            </li>
+            <li class="project__nav__item">
+              <a class="project__nav__link btn btn--p2" href="#ui-ux-design"
+                >UI / UX Design</a
+              >
+            </li>
+            <li class="project__nav__item">
+              <a class="project__nav__link btn btn--p2" href="#ui-ux-design"
+                >Prototyping</a
+              >
+            </li>
+            <li class="project__nav__item">
+              <a class="project__nav__link btn btn--p2" href="#usability-testing"
+                >Usability</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="project__details">
+          <div class="project__details-group">
+            <ion-icon name="person" class="project__details-icon"></ion-icon>
+            <p class="project__details-value">Individual Project</p>
+          </div>
+          <div class="project__details-group">
+            <ion-icon name="time" class="project__details-icon"></ion-icon>
+            <p class="project__details-value">12 Weeks</p>
+          </div>
+        </div>
+        <div class="project__image__wrapper">
+          <img
+            src="assets/images/project-2/project-2-image.png"
+            alt="Odin's Haven Smart Home App mobile screens"
+          />
+        </div>
+        <div class="project__tools">
+          <h2 class="heading__secondary project__tools-heading">Tools Used</h2>
+          <div class="project__tools-list">
+            <div class="project__tool">
+              <div class="project__tool-box">
+                <img
+                  src="assets/images/figma-logo.png"
+                  alt="Figma Logo"
+                  class="project__tool-img"
+                />
+              </div>
+            </div>
+
+            <div class="project__tool">
+              <div class="project__tool-box">
+                <img
+                  src="assets/images/photoshop-logo.png"
+                  alt="Photoshop Logo"
+                  class="project__tool-img"
+                />
+              </div>
+            </div>
+
+            <div class="project__tool">
+              <div class="project__tool-box">
+                <img
+                  src="assets/images/chatgpt-logo.png"
+                  alt="ChatGPT Logo"
+                  class="project__tool-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section__user__research" id="user-research">
+        <h2 class="heading__secondary heading__secondary--lined">
+          User Research
+        </h2>
+        <p class="heading__project__tag heading__project__tag--2">Overview</p>
+        <p class="projectpage__paragraph">
+          Smart home technology is becoming more accessible, yet everyday users
+          still find it difficult to manage multiple devices, ensure home
+          security, and maintain convenience without complexity. Many rely on
+          separate apps for cameras, locks, lighting, and appliance control,
+          resulting in a fragmented and overwhelming experience. This project
+          explores the need for a unified, intuitive, and reliable smart home
+          system that simplifies daily routines, enhances security, and adapts
+          to the unique lifestyles of home makers, busy professionals,
+          travellers, and pet owners.
+        </p>
+
+        <p class="heading__project__tag heading__project__tag--2">
+          Secondary Research
+        </p>
+        <p class="projectpage__paragraph">
+          Users reported difficulty managing their smart homes due to scattered
+          controls across multiple apps, leading to confusion and missed alerts.
+          Research highlights the need for a single, unified interface that
+          offers faster actions, clearer notifications, and seamless device
+          management.
+        </p>
+        <p class="heading__project__tag heading__project__tag--2">
+          User Insights
+        </p>
+        <div class="project__insights__grid">
+          <div class="project__insight project__insight--p2">
+            <h2 class="project__insight-title project__insight-title--p2">
+              Home Maker
+            </h2>
+            <p class="project__insight-text project__insight-text--p2">
+              “Switching between different apps for my devices is confusing. I
+              just want one place to control everything.”
+            </p>
+          </div>
+          <div class="project__insight project__insight--p2">
+            <h2 class="project__insight-title project__insight-title--p2">
+              Traveller
+            </h2>
+            <p class="project__insight-text project__insight-text--p2">
+              “When I travel, I need instant access to camera feeds and alerts
+              to know my home is safe.”
+            </p>
+          </div>
+          <div class="project__insight project__insight--p2">
+            <h2 class="project__insight-title project__insight-title--p2">
+              Worker
+            </h2>
+            <p class="project__insight-text project__insight-text--p2">
+              “My schedule is tight. I want quick actions like locking the door
+              or checking alerts in one tap.”
+            </p>
+          </div>
+          <div class="project__insight project__insight--p2">
+            <h2 class="project__insight-title project__insight-title--p2">
+              Pet Owner
+            </h2>
+            <p class="project__insight-text project__insight-text--p2">
+              “I need the system to tell pet movement apart from real security
+              issues to avoid false alarms.”
+            </p>
+          </div>
+        </div>
+        <p class="heading__project__tag heading__project__tag--2">
+          User Personas
+        </p>
+        <div class="project__slider__container">
+          <button
+            class="project__slider-btn project__slider-btn--left btn btn--p2"
+            aria-label="Previous slide"
+          >
+            <ion-icon name="chevron-back"></ion-icon>
+          </button>
+          <div class="project__slider">
+            <div class="project__slider-slides">
+              <div class="project__slide">
+                <img
+                  src="assets/images/project-2/User Type - 1.png"
+                  alt="User Persona 1"
+                  class="project__slide-img"
+                />
+              </div>
+              <div class="project__slide">
+                <img
+                  src="assets/images/project-2/User Type - 2.png"
+                  alt="User Persona 2"
+                  class="project__slide-img"
+                />
+              </div>
+              <div class="project__slide">
+                <img
+                  src="assets/images/project-2/User Type - 3.png"
+                  alt="User Persona 3"
+                  class="project__slide-img"
+                />
+              </div>
+              <div class="project__slide">
+                <img
+                  src="assets/images/project-2/User Type - 4.png"
+                  alt="User Persona 4"
+                  class="project__slide-img"
+                />
+              </div>
+            </div>
+          </div>
+          <button
+            class="project__slider-btn project__slider-btn--right btn btn--p2"
+            aria-label="Next slide"
+          >
+            <ion-icon name="chevron-forward"></ion-icon>
+          </button>
+        </div>
+        <p class="project__slider-hint">Click to expand the image</p>
+      </section>
+
+      <section class="section__problem__definition">
+        <h2 class="heading__secondary heading__secondary--lined">
+          Problem Definition
+        </h2>
+        <p class="heading__project__tag heading__project__tag--2">
+          Final Problem Statement
+        </p>
+        <p class="projectpage__paragraph">
+          “Everyday users find it difficult to manage multiple devices, ensure
+          home security, and maintain convenience without complexity. Many rely
+          on separate apps for cameras, locks, lighting, and appliance control,
+          resulting in a fragmented and overwhelming experience.”
+        </p>
+        <p class="heading__project__tag heading__project__tag--2">
+          Pain Points Summary
+        </p>
+        <div class="project__pain-points__grid">
+          <div class="project__pain-point project__pain-point--p2">
+            <img
+              src="assets/images/project-2/pain-points-icons-01.svg"
+              alt=""
+              class="project__pain-point-svg"
+            />
+            <h4 class="project__pain-point-title project__pain-point-title--p2">
+              Fragmented Device Management
+            </h4>
+          </div>
+          <div class="project__pain-point project__pain-point--p2">
+            <img
+              src="assets/images/project-2/pain-points-icons-02.svg"
+              alt=""
+              class="project__pain-point-svg"
+            />
+            <h4 class="project__pain-point-title project__pain-point-title--p2">
+              Unreliable or Missed Security Awareness
+            </h4>
+          </div>
+          <div class="project__pain-point project__pain-point--p2">
+            <img
+              src="assets/images/project-2/pain-points-icons-03.svg"
+              alt=""
+              class="project__pain-point-svg"
+            />
+            <h4 class="project__pain-point-title project__pain-point-title--p2">
+              Complex or Time-Consuming Automations
+            </h4>
+          </div>
+          <div class="project__pain-point project__pain-point--p2">
+            <img
+              src="assets/images/project-2/pain-points-icons-04.svg"
+              alt=""
+              class="project__pain-point-svg"
+            />
+            <h4 class="project__pain-point-title project__pain-point-title--p2">
+              Lack of a Unified, Stress-Free Experience
+            </h4>
+          </div>
+        </div>
+        <p class="heading__project__tag heading__project__tag--2">
+          Design Process
+        </p>
+
+        <div class="projectpage__full-bleed-img-wrapper projectpage__full-bleed-img-wrapper--large">
+          <img
+            src="assets/images/project-2/Design Proces.png"
+            alt="Odin's Haven Project Design Process"
+            class="projectpage__full-bleed-img"
+          />
+        </div>
+
+        <p class="heading__project__tag heading__project__tag--2">
+          Design Approach
+        </p>
+        <div class="project__approach__grid">
+          <div class="approach-card approach-card--p2">
+            <ion-icon name="map-outline"></ion-icon>
+            <h4 class="approach-card__title">Information Architecture</h4>
+          </div>
+          <div class="approach-card approach-card--p2">
+            <ion-icon name="grid-outline"></ion-icon>
+            <h4 class="approach-card__title">Wireframes Explorations</h4>
+          </div>
+          <div class="approach-card approach-card--p2">
+            <ion-icon name="phone-portrait-outline"></ion-icon>
+            <h4 class="approach-card__title">High Fidelity Prototype</h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__information__architecture" id="information-architecture">
+        <h2 class="heading__secondary heading__secondary--lined">
+          Information Architecture
+        </h2>
+        <p class="heading__project__tag heading__project__tag--2">Site Map</p>
+        <div class="projectpage__full-bleed-img-wrapper projectpage__full-bleed-img-wrapper--large">
+          <img
+            src="assets/images/project-2/IA Xpulse 2.png"
+            alt="Odin's Haven Site Map"
+            class="projectpage__full-bleed-img"
+          />
+        </div>
+        <p class="project__slider-hint">Click to expand the image</p>
+
+        <p class="heading__project__tag heading__project__tag--2">User Flows</p>
+        <p class="projectpage__paragraph">
+          User Flow - 01 - To add a device
+        </p>
+        <div
+          class="projectpage__full-bleed-img-wrapper projectpage__full-bleed-img-wrapper--large"
+        >
+          <img
+            src="assets/images/project-2/userflow-1.png"
+            alt="Odin's Haven User Flow 1 - Add Device"
+            class="projectpage__full-bleed-img"
+          />
+        </div>
+        <p class="project__slider-hint">Click to expand the image</p>
+
+        <p class="projectpage__paragraph">
+          User Flow - 02 - Automating Security
+        </p>
+        <div
+          class="projectpage__full-bleed-img-wrapper projectpage__full-bleed-img-wrapper--large"
+        >
+          <img
+            src="assets/images/project-2/userflow-2.png"
+            alt="Odin's Haven User Flow 2 - Automating Security"
+            class="projectpage__full-bleed-img"
+          />
+        </div>
+        <p class="project__slider-hint">Click to expand the image</p>
+
+        <p class="projectpage__paragraph">
+          User Flow - 03 - Edit Schedule
+        </p>
+        <div
+          class="projectpage__full-bleed-img-wrapper projectpage__full-bleed-img-wrapper--large"
+        >
+          <img
+            src="assets/images/project-2/userflow-3.png"
+            alt="Odin's Haven User Flow 3 - Edit Schedule"
+            class="projectpage__full-bleed-img"
+          />
+        </div>
+        <p class="project__slider-hint">Click to expand the image</p>
+      </section>
+      <section class="section__wireframes">
+        <p class="heading__project__tag heading__project__tag--2">Wireframes</p>
+        <div class="project__wireframes-container">
+          <div class="project__wireframe-screen">
+            <img
+              src="assets/images/project-2/wireframes-screen-01.png"
+              alt="Wireframe Screen 1"
+              class="project__wireframe-img"
+            />
+          </div>
+          <div class="project__wireframe-screen">
+            <img
+              src="assets/images/project-2/wireframes-screen-02.png"
+              alt="Wireframe Screen 2"
+              class="project__wireframe-img"
+            />
+          </div>
+          <div class="project__wireframe-screen">
+            <img
+              src="assets/images/project-2/wireframes-screen-03.png"
+              alt="Wireframe Screen 3"
+              class="project__wireframe-img"
+            />
+          </div>
+          <div class="project__wireframe-screen">
+            <img
+              src="assets/images/project-2/wireframes-screen-04.png"
+              alt="Wireframe Screen 4"
+              class="project__wireframe-img"
+            />
+          </div>
+          <div class="project__wireframe-screen">
+            <img
+              src="assets/images/project-2/wireframes-screen-05.png"
+              alt="Wireframe Screen 5"
+              class="project__wireframe-img"
+            />
+          </div>
+        </div>
+        <a href="#" class="btn btn--p2">View Wireframes</a>
+      </section>
+
+      <section class="section__design__execution">
+        <h2 class="heading__secondary heading__secondary--lined">
+          Design Execution
+        </h2>
+        <p class="heading__project__tag heading__project__tag--2">
+          Style Guide - Color scheme & Typography
+        </p>
+        <div
+          class="projectpage__full-bleed-img-wrapper projectpage__full-bleed-img-wrapper--large"
+        >
+          <img
+            src="assets/images/project-2/style-guide.png"
+            alt="Odin's Haven Style Guide"
+            class="projectpage__full-bleed-img"
+          />
+        </div>
+        <p class="project__slider-hint">Click to expand the image</p>
+
+        <p class="heading__project__tag heading__project__tag--2">
+          UI Component Library
+        </p>
+        <div
+          class="projectpage__full-bleed-img-wrapper projectpage__full-bleed-img-wrapper--large"
+        >
+          <img
+            src="assets/images/project-2/ui-component library.png"
+            alt="Odin's Haven UI Component Library"
+            class="projectpage__full-bleed-img"
+          />
+        </div>
+        <p class="project__slider-hint">Click to expand the image</p>
+      </section>
+      <section class="section__ui__ux__design" id="ui-ux-design">
+        <h2 class="heading__secondary heading__secondary--lined">
+          UI / UX Design & Prototyping
+        </h2>
+
+        <div class="project__hifi-container">
+          <div class="project__hifi-screen">
+            <img
+              src="assets/images/project-2/hifi-screens-01.png"
+              alt="Hi-Fi Screen 1"
+              class="project__hifi-img"
+            />
+          </div>
+          <div class="project__hifi-screen">
+            <img
+              src="assets/images/project-2/hifi-screens-02.png"
+              alt="Hi-Fi Screen 2"
+              class="project__hifi-img"
+            />
+          </div>
+          <div class="project__hifi-screen">
+            <img
+              src="assets/images/project-2/hifi-screens-03.png"
+              alt="Hi-Fi Screen 3"
+              class="project__hifi-img"
+            />
+          </div>
+          <div class="project__hifi-screen">
+            <img
+              src="assets/images/project-2/hifi-screens-04.png"
+              alt="Hi-Fi Screen 4"
+              class="project__hifi-img"
+            />
+          </div>
+          <div class="project__hifi-screen">
+            <img
+              src="assets/images/project-2/hifi-screens-05.png"
+              alt="Hi-Fi Screen 5"
+              class="project__hifi-img"
+            />
+          </div>
+          <div class="project__hifi-screen">
+            <img
+              src="assets/images/project-2/hifi-screens-06.png"
+              alt="Hi-Fi Screen 6"
+              class="project__hifi-img"
+            />
+          </div>
+        </div>
+        <div class="project__hifi-btns">
+          <a href="#" class="btn btn--p2">View All Screens</a>
+          <a href="#" class="btn btn--p2">View Prototyping</a>
+        </div>
+      </section>
+
+      <section class="section__usability__testing" id="usability-testing">
+        <h2 class="heading__secondary heading__secondary--lined">
+          Usability Testing
+        </h2>
+        <div class="project__usability-card">
+          <p class="projectpage__paragraph projectpage__paragraph--white">
+            The usability testing results showed strong task completion across
+            all core interactions, with most users performing actions quickly
+            and confidently. The most challenging area was editing routines,
+            where a few users experienced delays or confusion, though all
+            eventually completed the task. We compiled the performance data and
+            noted specific user suggestions to refine clarity in multi-step
+            flows such as device setup and routine editing. Overall,
+            participants completed nearly every task successfully, with only
+            minor prototype issues identified. These insights enabled me to
+            refine the wireframes and confidently move forward with the final
+            design.
+          </p>
+        </div>
+        <div class="project__usability-img-box">
+          <img
+            src="assets/images/project-2/usablitytesting-img.png"
+            alt="Usability Testing Illustration"
+          />
+        </div>
+
+        <p class="heading__project__tag heading__project__tag--2">
+          Benchmark Usability Testing
+        </p>
+        <div class="project__usability-table-wrapper">
+          <table class="project__usability-table">
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Benchmark Criteria</th>
+                <th>Observed Outcome</th>
+                <th>Benchmark Met</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Task">Turn on and adjust AC</td>
+                <td data-label="Benchmark Criteria">
+                  &le; 20 seconds, 90% success rate
+                </td>
+                <td data-label="Observed Outcome">
+                  Avg: 17 sec, All 6 completed successfully
+                </td>
+                <td data-label="Benchmark Met">Yes</td>
+              </tr>
+              <tr>
+                <td data-label="Task">Add new smart device</td>
+                <td data-label="Benchmark Criteria">
+                  &le; 1 minute, device added to correct room
+                </td>
+                <td data-label="Observed Outcome">
+                  Avg: 56 sec, One participant took 120 sec with errors
+                </td>
+                <td data-label="Benchmark Met">Partial</td>
+              </tr>
+              <tr>
+                <td data-label="Task">Edit “Good Morning” routine</td>
+                <td data-label="Benchmark Criteria">
+                  Routine opens &le; 5 sec, edits in &le; 35 sec
+                </td>
+                <td data-label="Observed Outcome">
+                  Avg: 31 sec, 1 failure, some confusion reported
+                </td>
+                <td data-label="Benchmark Met">Partial</td>
+              </tr>
+              <tr>
+                <td data-label="Task">View garage camera and controls</td>
+                <td data-label="Benchmark Criteria">
+                  &le; 35 seconds including interaction
+                </td>
+                <td data-label="Observed Outcome">
+                  Avg: 31 sec, All completed successfully, 1 delay noticing
+                  button
+                </td>
+                <td data-label="Benchmark Met">Yes</td>
+              </tr>
+              <tr>
+                <td data-label="Task">Customize motion/sound detection</td>
+                <td data-label="Benchmark Criteria">
+                  &le; 30 seconds, 90% success rate
+                </td>
+                <td data-label="Observed Outcome">
+                  Avg: 27 sec, All completed successfully, minor confusion in 2
+                  cases
+                </td>
+                <td data-label="Benchmark Met">Yes</td>
+              </tr>
+              <tr>
+                <td data-label="Task">Read new notification</td>
+                <td data-label="Benchmark Criteria">
+                  &le; 10 seconds to identify &amp; interpret alert
+                </td>
+                <td data-label="Observed Outcome">
+                  Avg: 4.5 sec, All 6 completed easily without any confusion
+                </td>
+                <td data-label="Benchmark Met">Yes</td>
+              </tr>
+              <tr>
+                <td data-label="Task">Lock and unlock all doors</td>
+                <td data-label="Benchmark Criteria">&le; 15 seconds</td>
+                <td data-label="Observed Outcome">
+                  Avg: 12 sec, All succeeded, one minor popup confusion reported
+                </td>
+                <td data-label="Benchmark Met">Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section__learning__outcome" id="learning-outcome">
+        <h2 class="heading__secondary heading__secondary--lined">
+          Learning Outcome
+        </h2>
+
+        <div class="project__learning-card">
+          <p class="projectpage__paragraph projectpage__paragraph--white">
+            This project strengthened my ability to design for real-world home
+            automation challenges by balancing simplicity, control, and
+            security. I learned how to streamline complex device interactions
+            into intuitive flows, reduce user friction in multi-step tasks, and
+            create a unified ecosystem that feels smart, safe, and effortless.
+            The process reinforced the importance of clear feedback, accessible
+            controls, and user-centred automation in building a reliable smart
+            home experience.
+          </p>
+        </div>
+
+        <div class="project__learning-img-box">
+          <img
+            src="assets/images/project-2/learning-outcome.png"
+            alt="Odin's Haven Learning Outcome Mockup"
+          />
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p class="footer__paragraph">Designed & Developed by Pratardan Hegde</p>
+      <div class="footer__icons">
+        <a
+          class="footer__link"
+          href="mailto:pratardan17@gmail.com"
+          aria-label="Icon to open Pratardan's Email"
+        >
+          <ion-icon
+            class="footer__icon footer__icon--mail"
+            name="mail"
+          ></ion-icon>
+        </a>
+        <a
+          class="footer__link"
+          href="https://www.linkedin.com/in/pratardanhegde/"
+          target="_blank"
+          aria-label="Icon to open Pratardan's Linkedin"
+        >
+          <ion-icon
+            class="footer__icon footer__icon--linkedin"
+            name="logo-linkedin"
+          ></ion-icon>
+        </a>
+      </div>
+    </footer>
+    <div class="overlay" id="overlay">
+      <button class="overlay__close btn">
+        <ion-icon name="close" class="header__icon"></ion-icon>
+      </button>
+      <div class="overlay__content">
+        <img src="" alt="" class="overlay__image" id="overlay-img" />
+        <video
+          src=""
+          class="overlay__video"
+          id="overlay-video"
+          controls
+          muted
+        ></video>
+      </div>
+    </div>
+  </body>
+</html>
