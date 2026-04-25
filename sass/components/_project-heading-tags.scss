@@ -14,4 +14,10 @@
     background-color: $color-p2-btns;
     color: $color-white;
   }
+  &--3 {
+    background-color: $color-p3-primary;
+    color: $color-white;
+    border-radius: 10rem;
+    padding: 1rem 2.8rem;
+  }
 }

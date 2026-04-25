@@ -36,10 +36,10 @@
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  padding-left: 3.5rem;
+  padding: 14rem 0 0 3.5rem;
 
   @include respond(tab-land) {
-    padding-top: 10rem;
+    padding-top: 15rem;
   }
 
   @include respond(tab-port) {
@@ -63,7 +63,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 8rem;
+    gap: 4rem;
 
     @include respond(tab-land) {
       width: 60%;
@@ -272,6 +272,14 @@
 
   @include respond(tab-port) {
     flex-direction: column-reverse;
+  }
+
+  &__image__container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
 
   &__content {

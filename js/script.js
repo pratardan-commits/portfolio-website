@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Handle Persona and Full-Bleed Images
   const expandableImages = document.querySelectorAll(
-    ".project__slide-img, .projectpage__full-bleed-img",
+    ".project__slide-img, .projectpage__full-bleed-img, .project__wireframe-img, .project__hifi-img",
   );
   expandableImages.forEach((img) => {
     img.addEventListener("click", () => {
@@ -128,4 +128,22 @@ document.addEventListener("DOMContentLoaded", () => {
       updateSlider();
     });
   }
+
+  // --- Project Image Click Logic ---
+  const projectImageContainers = document.querySelectorAll(
+    ".project__image__container",
+  );
+  projectImageContainers.forEach((container) => {
+    container.addEventListener("click", () => {
+      // Find the project button in the sibling content div to get the link
+      const projectCard = container.closest(".project");
+      const projectBtn = projectCard.querySelector(".project__btn");
+      if (projectBtn) {
+        const link = projectBtn.getAttribute("href");
+        if (link) {
+          window.location.href = link;
+        }
+      }
+    });
+  });
 });

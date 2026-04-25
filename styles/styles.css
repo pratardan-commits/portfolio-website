@@ -286,6 +286,12 @@ body {
   background-color: #682e68;
   color: #fdfdfd;
 }
+.heading__project__tag--3 {
+  background-color: #5466cc;
+  color: #fdfdfd;
+  border-radius: 10rem;
+  padding: 1rem 2.8rem;
+}
 
 .section__hero {
   height: 100vh;
@@ -325,11 +331,11 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  padding-left: 3.5rem;
+  padding: 14rem 0 0 3.5rem;
 }
 @media only screen and (max-width: 75em) {
   .hero {
-    padding-top: 10rem;
+    padding-top: 15rem;
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -355,7 +361,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 8rem;
+  gap: 4rem;
 }
 @media only screen and (max-width: 75em) {
   .hero__content {
@@ -574,6 +580,13 @@ body {
   .project {
     flex-direction: column-reverse;
   }
+}
+.project__image__container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 .project__content {
   display: flex;
@@ -1390,6 +1403,17 @@ body {
     gap: 3rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .project-1-page .section__user__research,
+  .project-1-page .section__problem__definition,
+  .project-1-page .section__information__architecture,
+  .project-1-page .section__wireframes,
+  .project-1-page .section__design__execution,
+  .project-1-page .section__ui__ux__design,
+  .project-1-page .section__learning__outcome {
+    padding: 2.5rem 1.5rem;
+  }
+}
 .project-1-page .section__user__research .heading__secondary--lined,
 .project-1-page .section__problem__definition .heading__secondary--lined,
 .project-1-page .section__information__architecture .heading__secondary--lined,
@@ -1431,6 +1455,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  cursor: zoom-in;
 }
 .project-1-page .project__wireframes-container {
   display: flex;
@@ -1469,6 +1494,31 @@ body {
   .project-1-page .project__hifi-container {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+.project-1-page .project__prototype-wrapper {
+  width: 100%;
+  max-width: 125rem;
+  aspect-ratio: 16/9;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 2px solid #0d0d0d;
+  background-color: #fff;
+  margin-top: -1rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-1-page .project__prototype-wrapper {
+    aspect-ratio: 1/1.2;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-1-page .project__prototype-wrapper {
+    aspect-ratio: 1/1.5;
+  }
+}
+.project-1-page .project__prototype-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 .project-1-page .project__hifi-btns {
   display: flex;
@@ -1569,6 +1619,12 @@ body {
     gap: 1.5rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .project-1-page .project__slider__container {
+    position: relative;
+    gap: 0;
+  }
+}
 .project-1-page .project__slider {
   width: 100%;
   overflow: hidden;
@@ -1590,9 +1646,27 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .project-1-page .project__slider-btn {
-    width: 4rem;
-    height: 4rem;
-    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
+    background-color: #f97400;
+    color: #0d0d0d;
+    border: 2px solid #0d0d0d;
+    box-shadow: 2px 3px 0 0 rgb(0, 0, 0);
+  }
+  .project-1-page .project__slider-btn--left {
+    left: 1rem;
+  }
+  .project-1-page .project__slider-btn--right {
+    right: 1rem;
+  }
+  .project-1-page .project__slider-btn:active {
+    transform: translateY(calc(-50% + 3px)) translateX(2px);
+    box-shadow: 1px 1px 0 0 rgb(0, 0, 0);
   }
 }
 .project-1-page .project__slider-hint {
@@ -2139,6 +2213,18 @@ body {
     gap: 3rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .project-2-page .section__user__research,
+  .project-2-page .section__problem__definition,
+  .project-2-page .section__information__architecture,
+  .project-2-page .section__wireframes,
+  .project-2-page .section__design__execution,
+  .project-2-page .section__ui__ux__design,
+  .project-2-page .section__usability__testing,
+  .project-2-page .section__learning__outcome {
+    padding: 2.5rem 1.5rem;
+  }
+}
 .project-2-page .section__user__research .heading__secondary--lined,
 .project-2-page .section__problem__definition .heading__secondary--lined,
 .project-2-page .section__information__architecture .heading__secondary--lined,
@@ -2220,6 +2306,7 @@ body {
 }
 @media only screen and (max-width: 56.25em) {
   .project-2-page .project__usability-table {
+    list-style: none;
     font-size: 1.2rem;
   }
 }
@@ -2229,6 +2316,11 @@ body {
     min-width: unset;
     background-color: transparent;
     list-style: none;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-2-page .project__usability-table thead {
+    display: none;
   }
 }
 .project-2-page .project__usability-table th {
@@ -2330,6 +2422,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  cursor: zoom-in;
 }
 .project-2-page .project__wireframes-container {
   display: flex;
@@ -2368,6 +2461,31 @@ body {
   .project-2-page .project__hifi-container {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+.project-2-page .project__prototype-wrapper {
+  width: 100%;
+  max-width: 125rem;
+  aspect-ratio: 16/9;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 2px solid #0d0d0d;
+  background-color: #fff;
+  margin-top: -1rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-2-page .project__prototype-wrapper {
+    aspect-ratio: 1/1.2;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-2-page .project__prototype-wrapper {
+    aspect-ratio: 1/1.5;
+  }
+}
+.project-2-page .project__prototype-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 .project-2-page .project__hifi-btns {
   display: flex;
@@ -2481,6 +2599,12 @@ body {
     gap: 1.5rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .project-2-page .project__slider__container {
+    position: relative;
+    gap: 0;
+  }
+}
 .project-2-page .project__slider {
   width: 100%;
   overflow: hidden;
@@ -2502,9 +2626,27 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .project-2-page .project__slider-btn {
-    width: 4rem;
-    height: 4rem;
-    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
+    background-color: #682e68;
+    color: #fdfdfd;
+    border: 2px solid #0d0d0d;
+    box-shadow: 2px 3px 0 0 rgb(0, 0, 0);
+  }
+  .project-2-page .project__slider-btn--left {
+    left: 1rem;
+  }
+  .project-2-page .project__slider-btn--right {
+    right: 1rem;
+  }
+  .project-2-page .project__slider-btn:active {
+    transform: translateY(calc(-50% + 3px)) translateX(2px);
+    box-shadow: 1px 1px 0 0 rgb(0, 0, 0);
   }
 }
 .project-2-page .project__slider-hint {
@@ -2745,6 +2887,711 @@ body {
   .project-2-page .project__improvement-tag {
     font-size: 1.2rem;
     padding: 1rem 1.8rem;
+  }
+}
+
+.project-3-page ul,
+.project-3-page li {
+  list-style: none !important;
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page ul::marker,
+  .project-3-page li::marker {
+    content: none !important;
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page * {
+    list-style: none !important;
+  }
+  .project-3-page *::marker {
+    content: none !important;
+    display: none !important;
+  }
+}
+.project-3-page .section__projectintro {
+  padding: 3.5rem;
+  padding-top: 15.5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .section__projectintro {
+    padding-top: 15rem;
+    gap: 3rem;
+  }
+}
+.project-3-page .project__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  justify-content: center;
+  text-align: left;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__header {
+    gap: 1.5rem;
+  }
+}
+.project-3-page .project__header-logo {
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__header-logo {
+    height: 8rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__header-logo {
+    height: 8rem;
+  }
+}
+.project-3-page .project__header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+}
+.project-3-page .project__header h2 {
+  white-space: nowrap;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__header h2 {
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__header h2 {
+    font-size: 1.8rem;
+  }
+}
+.project-3-page .project__genere--3 {
+  color: #2648eb;
+  font-size: 2.8rem;
+  font-weight: 700;
+  font-family: "Archivo", sans-serif;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__genere--3 {
+    font-size: 2.2rem;
+  }
+}
+.project-3-page .project__name--3 {
+  color: #5466cc !important;
+  font-size: 5.2rem;
+  font-weight: 400;
+  font-family: "Lily Script One", system-ui;
+  margin-top: -1rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__name--3 {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__name--3 {
+    font-size: 2.8rem;
+  }
+}
+.project-3-page .project__nav {
+  width: 100%;
+  padding-bottom: 3rem;
+}
+.project-3-page .project__nav__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__nav__list {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__nav__list {
+    gap: 1.2rem;
+    padding: 0 1rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__nav__item {
+    flex: 0 0 calc(50% - 1.5rem);
+    display: flex;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__nav__item {
+    flex: 0 0 calc(50% - 1.2rem);
+  }
+}
+.project-3-page .project__nav__link {
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__nav__link {
+    padding: 1.2rem 1.4rem;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__nav__link {
+    padding: 1rem 1.2rem;
+    font-size: 1.3rem;
+  }
+}
+.project-3-page .project__details {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__details {
+    gap: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__details {
+    gap: 1.5rem;
+  }
+}
+.project-3-page .project__details-group {
+  width: 25rem;
+  white-space: nowrap;
+  background-color: #2648eb;
+  color: #fdfdfd;
+  padding: 1rem 2.8rem;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  border: 2px solid #0d0d0d;
+  box-shadow: 4px 6px 0 0 rgb(0, 0, 0);
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__details-group {
+    width: 22rem;
+    padding: 0.8rem 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__details-group {
+    width: 18rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
+.project-3-page .project__details-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fdfdfd;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__details-value {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__details-value {
+    font-size: 1.3rem;
+  }
+}
+.project-3-page .project__details-icon {
+  font-size: 2rem;
+  color: #fdfdfd;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__details-icon {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__details-icon {
+    font-size: 1.4rem;
+  }
+}
+.project-3-page .project__image__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-3-page .project__image__wrapper img {
+  width: 100%;
+  max-width: 60rem;
+  height: auto;
+  object-fit: contain;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__image__wrapper img {
+    max-width: 85%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__image__wrapper img {
+    max-width: 95%;
+  }
+}
+.project-3-page .project__tools {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+.project-3-page .project__tools-heading {
+  color: #0d0d0d;
+}
+.project-3-page .project__tools-list {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__tools-list {
+    gap: 3rem;
+  }
+}
+.project-3-page .project__tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.project-3-page .project__tool-box {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__tool-box {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1.2rem;
+  }
+}
+.project-3-page .project__tool-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-3-page .project__tool-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #0d0d0d;
+  font-family: "Archivo", sans-serif;
+}
+.project-3-page .section__user__research,
+.project-3-page .section__problem__definition,
+.project-3-page .section__information__architecture,
+.project-3-page .section__wireframes,
+.project-3-page .section__design__execution,
+.project-3-page .section__ui__ux__design,
+.project-3-page .section__usability__testing,
+.project-3-page .section__learning__outcome {
+  width: 100%;
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 6rem;
+  scroll-margin-top: 10rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .section__user__research,
+  .project-3-page .section__problem__definition,
+  .project-3-page .section__information__architecture,
+  .project-3-page .section__wireframes,
+  .project-3-page .section__design__execution,
+  .project-3-page .section__ui__ux__design,
+  .project-3-page .section__usability__testing,
+  .project-3-page .section__learning__outcome {
+    padding: 3rem 4rem;
+    gap: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .section__user__research,
+  .project-3-page .section__problem__definition,
+  .project-3-page .section__information__architecture,
+  .project-3-page .section__wireframes,
+  .project-3-page .section__design__execution,
+  .project-3-page .section__ui__ux__design,
+  .project-3-page .section__usability__testing,
+  .project-3-page .section__learning__outcome {
+    padding: 2.5rem 1.5rem;
+  }
+}
+.project-3-page .section__user__research .heading__secondary--lined,
+.project-3-page .section__problem__definition .heading__secondary--lined,
+.project-3-page .section__information__architecture .heading__secondary--lined,
+.project-3-page .section__wireframes .heading__secondary--lined,
+.project-3-page .section__design__execution .heading__secondary--lined,
+.project-3-page .section__ui__ux__design .heading__secondary--lined,
+.project-3-page .section__usability__testing .heading__secondary--lined,
+.project-3-page .section__learning__outcome .heading__secondary--lined {
+  color: #0d0d0d;
+  text-align: center;
+  width: 100%;
+  align-self: stretch;
+  border-bottom: 1px solid rgba(13, 13, 13, 0.1);
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+.project-3-page .projectpage__paragraph {
+  text-align: center;
+  max-width: 125rem;
+  line-height: 1.6;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .projectpage__paragraph {
+    font-size: 1.6rem;
+  }
+}
+.project-3-page .project__insights__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  width: 100%;
+  max-width: 125rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__insights__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.project-3-page .project__insight {
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: transparent;
+}
+.project-3-page .project__insight-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0d0d0d;
+  font-family: "Archivo", sans-serif;
+}
+.project-3-page .project__insight-text {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #0d0d0d;
+  font-family: "Archivo", sans-serif;
+}
+.project-3-page .project__insight--p3 {
+  background-color: #2648eb;
+  border: none;
+  text-align: left;
+}
+.project-3-page .project__insight-title--p3 {
+  color: #fdfdfd !important;
+}
+.project-3-page .project__insight-text--p3 {
+  color: #fdfdfd !important;
+  font-size: 1.4rem;
+}
+.project-3-page .project__approach__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__approach__grid {
+    grid-template-columns: 1fr;
+    max-width: 28rem;
+  }
+}
+.project-3-page .approach-card {
+  background-color: #f97400;
+  border: 2px solid #0d0d0d;
+  box-shadow: 4px 6px 0 0 rgb(0, 0, 0);
+  border-radius: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .approach-card {
+    padding: 1.8rem 1.2rem;
+    gap: 1rem;
+    border-radius: 1.2rem;
+  }
+}
+.project-3-page .approach-card ion-icon {
+  font-size: 2.8rem;
+  color: #0d0d0d;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .approach-card ion-icon {
+    font-size: 2.2rem;
+  }
+}
+.project-3-page .approach-card__title {
+  color: #0d0d0d;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: "Archivo", sans-serif;
+}
+.project-3-page .project__pain-points__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 125rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__pain-points__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__pain-points__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.project-3-page .project__pain-point {
+  background-color: transparent;
+  border: 2px solid #0d0d0d;
+  border-radius: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+  min-height: 14rem;
+  box-shadow: 4px 6px 0 0 rgb(0, 0, 0);
+  transition: transform 0.3s ease;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__pain-point {
+    padding: 2rem 1.2rem;
+    min-height: 12rem;
+  }
+}
+.project-3-page .project__pain-point-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: contain;
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__pain-point-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.project-3-page .project__pain-point-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0d0d0d;
+  font-family: "Archivo", sans-serif;
+}
+.project-3-page .project__wireframe-screen,
+.project-3-page .project__hifi-screen {
+  flex: 1;
+  aspect-ratio: 9/19.5;
+  background-color: transparent;
+  border: none;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  min-width: 0;
+}
+.project-3-page .project__wireframe-img,
+.project-3-page .project__hifi-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+.project-3-page .project__wireframes-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 110rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__wireframes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__wireframes-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.project-3-page .project__hifi-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 145rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__hifi-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__hifi-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.project-3-page .project__hifi-btns {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__hifi-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+.project-3-page .project__prototype-wrapper {
+  width: 100%;
+  max-width: 125rem;
+  aspect-ratio: 16/9;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 2px solid #0d0d0d;
+  background-color: #fff;
+  margin-top: -1rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__prototype-wrapper {
+    aspect-ratio: 1/1.2;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .project-3-page .project__prototype-wrapper {
+    aspect-ratio: 1/1.5;
+  }
+}
+.project-3-page .project__prototype-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.project-3-page .projectpage__full-bleed-img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 125rem;
+  margin: 0 auto;
+  cursor: zoom-in;
+}
+.project-3-page .projectpage__full-bleed-img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1.5rem;
+}
+.project-3-page .project__usability-table-wrapper {
+  width: 100%;
+  max-width: 125rem;
+  overflow-x: auto;
+  margin-top: 3rem;
+  border: 2px solid #0d0d0d;
+  border-radius: 1.5rem;
+  background-color: #fff;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__usability-table-wrapper {
+    border: none;
+    background-color: transparent;
+  }
+}
+.project-3-page .project__usability-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: "Archivo", sans-serif;
+}
+.project-3-page .project__usability-table th,
+.project-3-page .project__usability-table td {
+  padding: 1.8rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #0d0d0d;
+}
+.project-3-page .project__usability-table th {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fdfdfd;
+  background-color: #2648eb;
+}
+.project-3-page .project__usability-table--p3 th {
+  background-color: #2648eb;
+}
+@media only screen and (max-width: 56.25em) {
+  .project-3-page .project__usability-table thead {
+    display: none;
+  }
+  .project-3-page .project__usability-table tr {
+    display: block;
+    border: 2px solid #0d0d0d;
+    margin-bottom: 3.5rem;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+  .project-3-page .project__usability-table td {
+    display: flex;
+    flex-direction: column;
+    text-align: left !important;
+    padding: 1.5rem 2rem;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .project-3-page .project__usability-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #2648eb;
+    margin-bottom: 0.5rem;
+  }
+  .project-3-page .project__usability-table td:last-child {
+    border-bottom: none;
   }
 }
 
