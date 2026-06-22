@@ -90,11 +90,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Handle Persona and Full-Bleed Images
   const expandableImages = document.querySelectorAll(
-    ".project__slide-img, .projectpage__full-bleed-img, .project__wireframe-img, .project__hifi-img",
+    ".project__slide-img, .projectpage__full-bleed-img, .project__wireframe-img, .project__hifi-img, .certifications__img-container",
   );
-  expandableImages.forEach((img) => {
-    img.addEventListener("click", () => {
-      if (overlayImg && overlayVideo) {
+  expandableImages.forEach((el) => {
+    el.addEventListener("click", () => {
+      const img = el.tagName === "IMG" ? el : el.querySelector("img");
+      if (img && overlayImg && overlayVideo) {
         overlayImg.src = img.src;
         overlayImg.style.display = "block";
         overlayVideo.style.display = "none";
